@@ -28,6 +28,7 @@ const post = posts.map(post  => (
       <div className="container-fluid App">
          <article className="row d-flex flex-column pt-5 ">{post}</article>
       </div>
+      
     );
   }
 }

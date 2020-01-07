@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
+import CommentBox from './commentBox';
 class post extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-        post: {}
+      post: {},
+      
     }
-}
-  componentDidMount(){
+  }
+  componentDidMount() {
     const { id } = this.props.match.params;
     const URL = `https://jsonplaceholder.typicode.com/posts/${id}`;
     axios.get(URL).then(res => {
@@ -18,15 +20,18 @@ class post extends Component {
     });
   }
 
+  
+
   render() {
-    let {title, body} = this.state.post
+    let { title, body } = this.state.post;
     return (
       <div className="container-fluid App">
         <div className="row d-flex flex-column pt-5 ">
           <div className="col-md-6 mx-auto bg-light shadow-lg p-5">
-                <h2>{title}</h2>
-                <p>{body}</p>
+            <h2>{title}</h2>
+            <p>{body}</p>
           </div>
+          <CommentBox/>
         </div>
       </div>
     );
@@ -34,14 +39,3 @@ class post extends Component {
 }
 
 export default post;
-
-
-
-
-
-
-
-
-
-
-
