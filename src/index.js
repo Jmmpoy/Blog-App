@@ -1,18 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Blog from './Blog';
 import * as serviceWorker from './serviceWorker';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Post from './post'
-
+import Post from './Components/Post/post'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 const routing = (
   <Router>
-      <Route exact path="/" component={App} />
+      <Route exact path="/" component={Blog} />
       <Route path="/post/:id" component={Post}/> 
-    
   </Router>
 );
 

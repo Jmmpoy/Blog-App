@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import PostList from './PostList'
+import PostList from './Components/PostList/postList'
 import axios from "axios";
-import Header from './header'
+import Header from './Components/Header/header'
 
 export default class App extends Component {
   state = {
@@ -19,6 +19,7 @@ export default class App extends Component {
         posts
       });
     });
+
   };
 
 

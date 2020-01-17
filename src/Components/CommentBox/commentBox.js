@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import CommentList from './commentList';
-import CommentForm from './commentForm';
+import CommentList from './CommentList/commentList';
+import CommentForm from './CommentForm/commentForm';
 
 
 class commentBox extends Component {
@@ -20,7 +20,6 @@ class commentBox extends Component {
   };
 
   handleCommentSubmit =(comment)=>{
-    
     const comments = [...this.state.comments];
     comment.id = Date.now();
     let newcomments = comments.concat([comment])
@@ -33,8 +32,8 @@ class commentBox extends Component {
   render() {
     
     return (
-      <div className="bg-light col-6 mx-auto text-center">
-        <p><b>Comments Section</b></p>
+      <div className="bg-light col-6 mx-auto text-center shadow" style={{borderRadius:'20px'}}>
+        <p className="pt-5" style={{fontSize:'1em'}}><b>Comments Section</b></p>
         <CommentList data={this.state.comments}/>
         <CommentForm onCommentSubmit={this.handleCommentSubmit}/>
       </div>
