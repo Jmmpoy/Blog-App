@@ -1,0 +1,46 @@
+.stack-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  font-family: "Merriweather";
+  position: relative;
+  z-index: 2;
+}
+
+.post-wrapper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+}
+
+.post-wrapper-content {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  -webkit-box-shadow: 0 0 0 5px black;
+          box-shadow: 0 0 0 5px black;
+  /* All the borders by using the spread properties */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  opacity: 1;
+  background: white;
+}
+
+.post-wrapper-content:hover {
+  -webkit-box-shadow: 0 0 0 6px black;
+          box-shadow: 0 0 0 6px black;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+/*# sourceMappingURL=post.css.map */

@@ -1,6 +1,56 @@
-.title{
-    color:black;
-    font-weight:300;
-    font-size: 20px;
+.title-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; /* Need a specific value to work */
+  text-align: center;
+  z-index: 1;
+  font-weight: 900;
+  visibility: hidden;
+  
 }
 
+.title > h1 {
+  color: black;
+  font-size: 6rem;
+  font-family: "Merriweather";
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.title:hover {
+  color: black;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.socials {
+  position: absolute;
+  display: flex;
+  top: 50px;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.socials > li {
+  list-style: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transform: translateX(100px);
+}
+
+.socials > li:first-of-type {
+  margin-right: 1rem;
+}
+
+.socials > li > i {
+  transform: rotate(90deg);
+  color: black;
+  transition: 0.3s;
+}
+
+.socials > li > i:hover {
+  color: #dc143c;
+}

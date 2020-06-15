@@ -1,11 +1,12 @@
-import React, { Component } from 'react'
-import PostList from './Components/PostList/postList'
+import React, { Component } from "react";
+import PostList from "./Components/PostList/postList";
 import axios from "axios";
-import Header from './Components/Header/header'
+import Header from "./Components/Header/header";
+import "./index.css";
 
 export default class App extends Component {
   state = {
-    posts: []
+    posts: [],
   };
 
   componentDidMount() {
@@ -13,24 +14,21 @@ export default class App extends Component {
   }
 
   getPost = () => {
-    axios.get(`https://jsonplaceholder.typicode.com/posts`).then(res => {
+    axios.get(`https://jsonplaceholder.typicode.com/posts`).then((res) => {
       const posts = res.data;
       this.setState({
-        posts
+        posts,
       });
     });
-
   };
 
-
   render() {
-    const posts = this.state.posts
+    const posts = this.state.posts;
     return (
-      <div>
-          <Header/>
-          <PostList posts={posts}/>
+      <div className="stack">
+        <Header />
+        <PostList posts={posts} />
       </div>
-      
-    )
+    );
   }
 }

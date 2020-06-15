@@ -32,8 +32,8 @@ class commentBox extends Component {
   render() {
     
     return (
-      <div className="bg-light col-6 mx-auto text-center shadow" style={{borderRadius:'20px'}}>
-        <p className="pt-5" style={{fontSize:'1em'}}><b>Comments Section</b></p>
+      <div className="Comment" >
+        <p className="" ><b>Comments Section</b></p>
         <CommentList data={this.state.comments}/>
         <CommentForm onCommentSubmit={this.handleCommentSubmit}/>
       </div>

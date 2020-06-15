@@ -1,3 +1,132 @@
-.post{
-    border-radius:20px;
+.list-wrapper {
+  height: 90vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.post {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 20;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: calc(85% / 3);
+  margin-left: -230px;
+  -webkit-box-shadow: 0 0 0 2px black;
+          box-shadow: 0 0 0 2px black;
+  /* All the borders by using the spread properties */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+  height: 400px;
+  color: black;
+  margin-top: 12rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  opacity: 1;
+  font-family: "Merriweather";
+  -webkit-animation: fadeIn ease-in 1s;
+          animation: fadeIn ease-in 1s;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+  white-space: initial;
+  margin-top: -20rem;
+}
+
+.post:hover {
+  background: #eef4f1;
+  opacity: 0.8;
+  -webkit-box-shadow: 0 0 0 5px black;
+          box-shadow: 0 0 0 5px black;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
+
+.post:first-of-type {
+  margin-left: -330px;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+post:hover {
+  opacity: 0.7;
+}
+
+.post-content {
+  position: relative;
+  color: black;
+}
+
+.post-content:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.post-content-title {
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+p:hover {
+  color: black;
+  text-decoration: none;
+}
+
+div:not(:first-child):not(:last-child) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.comment-wrapper {
+  margin-top: 5rem;
+  font-family: "Merriweather";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */
